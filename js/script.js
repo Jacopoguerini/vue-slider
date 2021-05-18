@@ -18,7 +18,6 @@ var app = new Vue ({
         imgIndex: 0
     },
     methods: {
-
         nextImage: function () {
           this.imgIndex++;
           if (this.imgIndex == this.images.url.length) {
@@ -29,7 +28,7 @@ var app = new Vue ({
             this.imgIndex--;
             if (this.imgIndex < 0) {
                 this.imgIndex = this.images.url.length - 1;
-            } 
+            }
         }
     }
 });

@@ -18,13 +18,13 @@
             
             <div class="img-container">
                 <div class="arrow-left">
-                    <i class="fas fa-chevron-left"></i>
+                    <i @click="prevImage" class="fas fa-chevron-left"></i>
                 </div>
 
-                <img v-for="url in images" :src="url" alt="">
+                <img :src="images.url[imgIndex]" alt="">
 
                 <div class="arrow-right">
-                    <i class="fas fa-chevron-right"></i>
+                    <i @click="nextImage" class="fas fa-chevron-right"></i>
                 </div>
             </div>
             

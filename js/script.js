@@ -4,16 +4,24 @@ var app = new Vue ({
         images: {
             url: [
                 "https://i.pinimg.com/originals/0d/af/73/0daf73d3471efc7ae0392b9255773ee9.jpg",
-                "https://cdn11.bigcommerce.com/s-ydriczk/images/stencil/original/products/88995/93191/The-Shawshank-Redemption-10th-Anniversary-FInal-Style-Poster-buy-original-movie-posters-at-starstills__13946.1563964643.jpg?c=2",
-                "https://cdn.shopify.com/s/files/1/0969/9128/products/Joker_-_Joaquin_Phoenix_-_Hollywood_Action_Movie_Poster_08339151-d79a-4b7b-8bc7-dcad04881c2c.jpg?v=1573629460",
-                "https://images-na.ssl-images-amazon.com/images/I/814Cbv8EftL._AC_SL1200_.jpg",
-                "https://mypostercollection.com/wp-content/uploads/2018/07/Fight-Club-MyPosterCollection.com-1.jpg"
+                "https://cdn11.bigcommerce.com/s-ydriczk/images/stencil/1280x1280/products/88935/92996/Joker-Joaquin-Phoenix-Advance-Style-Poster-buy-original-movie-posters-at-starstills__08883.1559577196.jpg?c=2?imbypass=on"
             ]
-        }
+        },
+        imgIndex: 0
     },
     methods: {
+
         nextImage: function () {
-            this.img.url++
+          this.imgIndex++;
+          if (this.imgIndex == this.images.url.length) {
+            this.imgIndex = 0;
+          }  
+        },
+        prevImage: function () {
+            this.imgIndex--;
+            if (this.imgIndex < 0) {
+                this.imgIndex = this.images.url.length - 1;
+            } 
         }
     }
 });

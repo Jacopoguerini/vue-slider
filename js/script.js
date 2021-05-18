@@ -3,8 +3,16 @@ var app = new Vue ({
     data: {
         images: {
             url: [
-                "https://i.pinimg.com/originals/0d/af/73/0daf73d3471efc7ae0392b9255773ee9.jpg",
-                "https://cdn11.bigcommerce.com/s-ydriczk/images/stencil/1280x1280/products/88935/92996/Joker-Joaquin-Phoenix-Advance-Style-Poster-buy-original-movie-posters-at-starstills__08883.1559577196.jpg?c=2?imbypass=on"
+                "https://www.movienco.co.uk/carteles/8200/8233/001.jpg",
+                "https://cdn.shopify.com/s/files/1/1416/8662/products/seven_samurai_1954_R67_japanese_b2_original_film_art_1200x.jpg?v=1593993082",
+                "https://images-na.ssl-images-amazon.com/images/I/61GgzQ7Iq7L._AC_SL1000_.jpg",
+                "https://images-na.ssl-images-amazon.com/images/I/91BT34MLA5L._AC_SL1500_.jpg"
+            ],
+            title: [
+                "Samurai I - Miyamoto Musashi",
+                "I Sette Samurai",
+                "Harakiri",
+                "Rashomon"
             ]
         },
         imgIndex: 0

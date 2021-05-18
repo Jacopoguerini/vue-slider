@@ -10,14 +10,16 @@
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
         <!-- CSS -->
         <link rel="stylesheet" href="css/style.css">
+        <!-- Font -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
         <title>Vue Slider</title>
     </head>
     <body>
 
         <div id="root">
-            
             <div class="title">
-                <h2 v-for="title in title">{{ title }}</h2>
+                <h1>{{images.title[imgIndex]}}</h1>
             </div>
 
             <div class="img-container">
@@ -26,7 +28,11 @@
                     <i @click="prevImage" class="fas fa-chevron-left"></i>
                 </div>
 
-                <img :src="images.url[imgIndex]" alt="images.title[imgIndex]">
+                <img
+                :src="images.url[imgIndex]"
+                alt="images.title[imgIndex]"
+                on:mouseover="stopRotation"
+                on:mouseout="startRotation">
 
                 <div class="arrow-right">
                     <i @click="nextImage" class="fas fa-chevron-right"></i>

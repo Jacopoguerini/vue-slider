@@ -15,8 +15,10 @@ var app = new Vue ({
                 "Rashomon"
             ]
         },
-        imgIndex: 0
+        imgIndex: 0,
+        timer: null
     },
+
     methods: {
         nextImage: function () {
           this.imgIndex++;
@@ -29,6 +31,9 @@ var app = new Vue ({
             if (this.imgIndex < 0) {
                 this.imgIndex = this.images.url.length - 1;
             }
+        },
+        startSlide: function() {
+            this.timer = setInterval(this.next, 5000);
         }
     }
 });

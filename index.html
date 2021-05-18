@@ -13,10 +13,15 @@
         <title>Vue Slider</title>
     </head>
     <body>
-        
+
         <div id="root">
             
+            <div class="title">
+                <h2></h2>
+            </div>
+
             <div class="img-container">
+
                 <div class="arrow-left">
                     <i @click="prevImage" class="fas fa-chevron-left"></i>
                 </div>
@@ -27,6 +32,7 @@
                     <i @click="nextImage" class="fas fa-chevron-right"></i>
                 </div>
             </div>
+
             <div class="slider">
                 <i
                 @click="imgIndex = index" 
